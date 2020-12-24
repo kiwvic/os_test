@@ -1,6 +1,10 @@
 #1/bin/bash
-directory = $1
-for file in *.txt
-do
-# as
-done
+if [ -d $1 ]
+then
+	for file in *.txt
+	do
+	mv $file $1
+	done
+else
+	echo "dir must exist"
+fi
