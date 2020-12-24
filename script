@@ -1,0 +1,6 @@
+#1/bin/bash
+directory = $1
+for file in *.txt
+do
+# as
+done
