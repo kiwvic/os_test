@@ -1,10 +1,16 @@
 #1/bin/bash
-if [ -d $1 ]
+if (( $# != 1 ))
 then
-	for file in *.txt
-	do
-	mv $file $1
-	done
+	echo "U didn't chosen dir where files must be moved. Or u chosen more than one dir."
+	exit 1
 else
-	echo "dir must exist"
+	if [ -d $1 ]
+	then
+		for file in *.txt
+		do
+		mv $file $1
+		done
+	else
+		echo "dir must exist"
+	fi
 fi
